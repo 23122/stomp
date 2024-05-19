@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout/mainLayout :: layout(~{::head}, ~{::main})}">
+<head>
+    <script type="text/javascript" src="/js/socket.js"></script>
+</head>
+<main>
+    <div>
+        <h2>Socket Test</h2>
+    </div>
+    <div>
+        <input type="text" id="roomName" placeholder="write room name" value=""/>
+        <button type="button" onclick="createRoom()">
+            createRoom
+        </button>
+    </div>
+    <div>
+        <button type="button" onclick="chatList()">chatList</button>
+        <table>
+            <thead>
+            <tr>
+                <td>name</td>
+                <td>chatId</td>
+                <td></td>
+            </tr>
+            </thead>
+            <tbody id="chatList">
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h4>subscribe message</h4>
+        <ul id="message">
+
+        </ul>
+    </div>
+    <div>
+        <h4>publish message</h4>
+        <input type="text" id="text" placeholder="write message" value="" />
+        <button type="button" onclick="sendMessage($('#text').val())">send</button>
+    </div>
+</main>
+</html>

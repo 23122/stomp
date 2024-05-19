@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="layout (head, main)" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>STOMP Test</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <th:block th:replace="${head}"></th:block>
+</head>
+<body>
+<main th:replace="${main}">
+    <!-- main-area -->
+</main>
+</body>
+</html>

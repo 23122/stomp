@@ -4,6 +4,7 @@ import com.test.socket.model.ChatRoom;
 import com.test.socket.service.RedisSubscriber;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.listener.ChannelTopic;
@@ -16,6 +17,7 @@ import java.util.Map;
 
 @RequiredArgsConstructor
 @Repository
+@Slf4j
 public class ChatRoomRepository {
     // 채팅방(topic)에 발행되는 메시지를 처리할 Listner
     private final RedisMessageListenerContainer redisMessageListener;
