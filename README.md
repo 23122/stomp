@@ -1,3 +1,3 @@
-# Spring Boot STOMP whit Redis Pub/Sub
+# Spring Boot STOMP with Redis Pub/Sub
 
 ---
